@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gauge App</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body ng-controller="mainCtrl">
@@ -42,15 +42,12 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">Panel title</h3>
                         {{selectedBrand}}
-                        <select class="form-control" ng-model="selectedBrand" ng-options="brand.id as brand.name for brand in brands"></select>
+                        <select class="form-control" ng-model="selectedBrand" 
+                        ng-change="mountGraphic(selectedBrand)" ng-options="brand.id as brand.name for brand in brands"></select>
 
                     </div>
                     <div class="panel-body">
-                        <canvas id="bar" 
-                            class="chart chart-bar" 
-                            chart-data="data" 
-                            chart-labels="labels" 
-                            chart-series="series">
+                        <canvas ng-if="isCreated" id="base" class="chart-horizontal-bar" chart-data="data" chart-labels="labels">
                         </canvas>
                     </div>
 
