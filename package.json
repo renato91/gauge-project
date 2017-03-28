@@ -1,0 +1,24 @@
+{
+  "name": "gauge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renato91/gauge-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/renato91/gauge-project/issues"
+  },
+  "homepage": "https://github.com/renato91/gauge-project#readme",
+  "dependencies": {
+    "angular-chart.js": "^1.1.1",
+    "angularjs": "0.0.1",
+    "chartjs": "^0.3.24"
+  }
+}

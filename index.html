@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="gaugeApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gauge App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body ng-controller="mainCtrl">
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="#">Gauge</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <div class="row">
+            <div class="col-sm-12">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                        {{selectedBrand}}
+                        <select class="form-control" ng-model="selectedBrand" ng-options="brand.id as brand.name for brand in brands"></select>
+
+                    </div>
+                    <div class="panel-body">
+                        <canvas id="bar" 
+                            class="chart chart-bar" 
+                            chart-data="data" 
+                            chart-labels="labels" 
+                            chart-series="series">
+                        </canvas>
+                    </div>
+
+                </div>
+            </div>
+
+    </main>
+
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/main.controller.js"></script>
+
+</body>
+
+</html>
