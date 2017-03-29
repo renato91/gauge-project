@@ -19,6 +19,13 @@
   "dependencies": {
     "angular-chart.js": "^1.1.1",
     "angularjs": "0.0.1",
+    "bootstrap": "^3.3.7",
     "chartjs": "^0.3.24"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-uglify": "^2.1.2",
+    "pump": "^1.0.2"
   }
 }
