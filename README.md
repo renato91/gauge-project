@@ -4,11 +4,11 @@ Este projeto tem como objetivo possibilitar a visualização dos usuários mais 
 
 # Como instalar
 
-Após baixar este projeto, execute o comando *npm install* para baixar as dependências necessárias para executar o projeto.
+Após baixar este projeto, execute o comando **npm install** para baixar as dependências necessárias para executar o projeto.
 
 # Distribuição
 
-Para minificar os arquivos html/js foi utilizado o gulp como _task runner_, a versão final se encontra no diretório */dist*
+Para minificar os arquivos html/js foi utilizado o gulp como _task runner_, a versão final se encontra no diretório **/dist**
 
 # Demonstração
 
